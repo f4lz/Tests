@@ -7,7 +7,7 @@ $semibold: 600;
 
 * {
   font-family: 'Open Sans', sans-serif;
-  overflow: auto;
+  // overflow: auto;
 }
 
 .container-2 {
@@ -113,6 +113,8 @@ $semibold: 600;
     justify-content:space-between;
     align-items: flex-end;
     padding-bottom: 18px;
+    padding-top: 5px;
+
 
     &__price {
       display:flex;
@@ -120,14 +122,17 @@ $semibold: 600;
 
       .price__sum {
         font-size: $fz-large;
+        padding: 10px 0;
+        overflow: visible;
       }
 
       .price__add-sum {
-        font-size: $fz-small;
+        font-size: $fz-medium;
       }
     }
 
     &__link {
+      overflow: auto;
       cursor: pointer;
       border-radius: 20px;
       padding: 12px 42px;
@@ -178,6 +183,27 @@ $semibold: 600;
 
 }
 
+
+.time-list__item--more {
+  display: none;
+}
+
+.more {
+  margin-left: 4px;    
+
+  &__title {
+    display: flex;
+    
+  }
+
+  &__list:not(:first-child) {
+    padding-top: 5px;
+  }
+  
+}
+
+
+
 @media screen and (min-width: 405px) {
   .cards__img {
     background-image: url('../images/AdobeStock_168443825.webp');
@@ -186,7 +212,7 @@ $semibold: 600;
     background-color: #404040;
     background-size:cover;
     max-width: 473px;
-    min-height: 400px;
+    min-height: 413px;
 
     &::after {
       color: white;
@@ -214,6 +240,24 @@ $semibold: 600;
 }
 
 @media screen and (min-width: 1106px) {
+
+  .more {
+      
+  
+    &__title {
+      display: flex;
+      
+    }
+  
+    &__list:not(:first-child) {
+      padding-top: 5px;
+    }
+    
+  }
+
+  .info__price {
+    padding-top: 5px;
+  }
 
   .cards .duration--second {
     display: flex;
@@ -294,6 +338,8 @@ $semibold: 600;
   }
 
   .time-list {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: -9%;
     left: 36%;
@@ -320,6 +366,8 @@ $semibold: 600;
   }
 
   .cards .info {
+    align-items: center;
+    padding-top: 5px;
     justify-content: flex-start;
     gap: 10px;
   }
