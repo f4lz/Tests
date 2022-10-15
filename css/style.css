@@ -62,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 
 * {
   font-family: "Open Sans", sans-serif;
-  overflow: auto;
 }
 
 .container-2 {
@@ -184,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: end;
           align-items: flex-end;
   padding-bottom: 18px;
+  padding-top: 5px;
 }
 .cards .info__price {
   display: -webkit-box;
@@ -196,11 +196,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cards .info__price .price__sum {
   font-size: 30px;
+  padding: 10px 0;
+  overflow: visible;
 }
 .cards .info__price .price__add-sum {
-  font-size: 12px;
+  font-size: 14px;
 }
 .cards .info__link {
+  overflow: auto;
   cursor: pointer;
   border-radius: 20px;
   padding: 12px 42px;
@@ -240,6 +243,22 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.time-list__item--more {
+  display: none;
+}
+
+.more {
+  margin-left: 4px;
+}
+.more__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.more__list:not(:first-child) {
+  padding-top: 5px;
+}
+
 @media screen and (min-width: 405px) {
   .cards__img {
     background-image: url("../images/AdobeStock_168443825.webp");
@@ -248,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #404040;
     background-size: cover;
     max-width: 473px;
-    min-height: 400px;
+    min-height: 413px;
   }
   .cards__img::after {
     color: white;
@@ -272,6 +291,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media screen and (min-width: 1106px) {
+  .more__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .more__list:not(:first-child) {
+    padding-top: 5px;
+  }
+
+  .info__price {
+    padding-top: 5px;
+  }
+
   .cards .duration--second {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -353,6 +385,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .time-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: -9%;
     left: 36%;
@@ -377,6 +415,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .cards .info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 5px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
